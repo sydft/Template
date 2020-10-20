@@ -2,54 +2,96 @@
 
 <project>
   <fileVersion>2</fileVersion>
-  <fileChecksum>3664068899</fileChecksum>
+  <fileChecksum>2424917100</fileChecksum>
   <configuration>
     <name>Debug</name>
     <outputs>
-      <file>$PROJ_DIR$\Debug\Exe\Template.d51</file>
-      <file>$PROJ_DIR$\Debug\Obj\Template.pbd</file>
+      <file>$PROJ_DIR$\..\App\main.c</file>
+      <file>$PROJ_DIR$\..\App\led.c</file>
       <file>$PROJ_DIR$\Debug\Obj\main.r51</file>
-      <file>C:\Users\&#x90D1;&#x4F1F;\Desktop\main.c</file>
+      <file>$TOOLKIT_DIR$\config\devices\Texas Instruments\lnk51ew_cc2531F256_banked.xcl</file>
       <file>$PROJ_DIR$\Debug\Obj\main.pbi</file>
+      <file>$TOOLKIT_DIR$\inc\ioCC2530.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\led.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\Template.pbd</file>
+      <file>$PROJ_DIR$\..\App\led.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\led.r51</file>
+      <file>$TOOLKIT_DIR$\lib\clib\cl-pli-blxd-1e16x01.r51</file>
+      <file>$PROJ_DIR$\Debug\Exe\Template.d51</file>
     </outputs>
     <file>
       <name>[ROOT_NODE]</name>
       <outputs>
         <tool>
           <name>XLINK</name>
-          <file> 0</file>
+          <file> 11</file>
         </tool>
       </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\App\main.c</name>
+      <outputs>
+        <tool>
+          <name>ICC8051</name>
+          <file> 2</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 4</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICC8051</name>
+          <file> 8 5</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 8 5</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\App\led.c</name>
+      <outputs>
+        <tool>
+          <name>ICC8051</name>
+          <file> 9</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 6</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICC8051</name>
+          <file> 8 5</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 8 5</file>
+        </tool>
+      </inputs>
     </file>
     <file>
       <name>$PROJ_DIR$\Debug\Obj\Template.pbd</name>
       <inputs>
         <tool>
           <name>BILINK</name>
-          <file> 4</file>
+          <file> 6 4</file>
         </tool>
       </inputs>
     </file>
     <file>
-      <name>C:\Users\&#x90D1;&#x4F1F;\Desktop\main.c</name>
-      <outputs>
+      <name>$PROJ_DIR$\Debug\Exe\Template.d51</name>
+      <inputs>
         <tool>
-          <name>BICOMP</name>
-          <file> 4</file>
+          <name>XLINK</name>
+          <file> 3 9 2 10</file>
         </tool>
-        <tool>
-          <name>ICC8051</name>
-          <file> 2</file>
-        </tool>
-      </outputs>
+      </inputs>
     </file>
-    <forcedrebuild>
-      <name>[MULTI_TOOL]</name>
-      <tool>XLINK</tool>
-    </forcedrebuild>
-    <forcedrebuild>
-      <name>[REBUILD_ALL]</name>
-    </forcedrebuild>
   </configuration>
   <configuration>
     <name>Release</name>

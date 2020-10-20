@@ -760,7 +760,7 @@
         </option>
         <option>
           <name>XclFile</name>
-          <state>$TOOLKIT_DIR$\config\devices\Texas Instruments\lnk51ew_cc2530F256_banked.xcl</state>
+          <state>$TOOLKIT_DIR$\config\devices\Texas Instruments\lnk51ew_cc2531F256_banked.xcl</state>
         </option>
         <option>
           <name>XclFileSlave</name>
@@ -2067,11 +2067,17 @@
   <group>
     <name>App</name>
     <file>
-      <name>C:\Users\&#x90D1;&#x4F1F;\Desktop\main.c</name>
+      <name>$PROJ_DIR$\..\App\main.c</name>
     </file>
   </group>
   <group>
     <name>Driver</name>
+    <file>
+      <name>$PROJ_DIR$\..\App\led.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\App\led.h</name>
+    </file>
   </group>
 </project>
 
