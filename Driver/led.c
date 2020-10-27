@@ -7,9 +7,9 @@
 ****************************************************************************
 * 副本
 *
-*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-/*头文件---------------------------------------------------*/
+\*头文件---------------------------------------------------*/
 #include"led.h"
 /*宏定义---------------------------------------------------*/
 //D1 D2 D3 P1_0 P1_1 P1_4
@@ -124,27 +124,23 @@ void LedOff (unsigned char ucLedNum)
 ---------------------------------------------------*/
 void LedToggle (unsigned char ucLedNum)
 {
-  if(LED_ALL_E == ucLedNum)
+  if(LED_LED1_E == ucLedNum)
   {
-    LED1=!LED1;
-    LED2=!LED2;
-    LED3=!LED3;
-  }
-  else if(LED_LED1_E == ucLedNum)
-  {
-    LED1=!LED1;
+    LED1=LED_OFF;
+    LED2=LED_ON;
+    LED3=LED_ON;
   }
   else if(LED_LED2_E == ucLedNum)
   {
-    LED1=!LED2;
+    LED2=LED_OFF;
+    LED1=LED_ON;
+    LED3=LED_ON;
   }
   else if(LED_LED3_E == ucLedNum)
   {
-    LED1=!LED3;
-  }
-  else
-  {
-    //do nothing
+    LED3=LED_OFF;
+    LED1=LED_ON;
+    LED2=LED_ON;
   }
 }
 

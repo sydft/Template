@@ -2,29 +2,35 @@
 
 <project>
   <fileVersion>2</fileVersion>
-  <fileChecksum>2424917100</fileChecksum>
+  <fileChecksum>4061452778</fileChecksum>
   <configuration>
     <name>Debug</name>
     <outputs>
-      <file>$PROJ_DIR$\..\App\main.c</file>
-      <file>$PROJ_DIR$\..\App\led.c</file>
-      <file>$PROJ_DIR$\Debug\Obj\main.r51</file>
-      <file>$TOOLKIT_DIR$\config\devices\Texas Instruments\lnk51ew_cc2531F256_banked.xcl</file>
-      <file>$PROJ_DIR$\Debug\Obj\main.pbi</file>
-      <file>$TOOLKIT_DIR$\inc\ioCC2530.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\led.pbi</file>
-      <file>$PROJ_DIR$\Debug\Obj\Template.pbd</file>
       <file>$PROJ_DIR$\..\App\led.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\led.r51</file>
+      <file>$PROJ_DIR$\..\App\key.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\main.pbi</file>
+      <file>$PROJ_DIR$\..\App\main.c</file>
+      <file>$PROJ_DIR$\Debug\Obj\key.r51</file>
       <file>$TOOLKIT_DIR$\lib\clib\cl-pli-blxd-1e16x01.r51</file>
+      <file>$TOOLKIT_DIR$\config\devices\Texas Instruments\lnk51ew_cc2531F256_banked.xcl</file>
+      <file>$PROJ_DIR$\Debug\Obj\main.r51</file>
+      <file>$PROJ_DIR$\Debug\Obj\led.pbi</file>
+      <file>$PROJ_DIR$\..\Driver\key.c</file>
+      <file>$TOOLKIT_DIR$\inc\ioCC2530.h</file>
+      <file>$PROJ_DIR$\..\App\led.c</file>
+      <file>$PROJ_DIR$\Debug\Obj\Template.pbd</file>
+      <file>$PROJ_DIR$\Debug\Obj\led.r51</file>
+      <file>$PROJ_DIR$\Debug\Obj\key.pbi</file>
       <file>$PROJ_DIR$\Debug\Exe\Template.d51</file>
+      <file>$PROJ_DIR$\..\Driver\key.h</file>
+      <file>C:\Users\&#x90D1;&#x4F1F;\AppData\Roaming\IAR Embedded Workbench\CodeTemplates.ENU.txt</file>
     </outputs>
     <file>
       <name>[ROOT_NODE]</name>
       <outputs>
         <tool>
           <name>XLINK</name>
-          <file> 11</file>
+          <file> 15</file>
         </tool>
       </outputs>
     </file>
@@ -32,22 +38,45 @@
       <name>$PROJ_DIR$\..\App\main.c</name>
       <outputs>
         <tool>
-          <name>ICC8051</name>
+          <name>BICOMP</name>
           <file> 2</file>
         </tool>
         <tool>
+          <name>ICC8051</name>
+          <file> 7</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
           <name>BICOMP</name>
+          <file> 0 10</file>
+        </tool>
+        <tool>
+          <name>ICC8051</name>
+          <file> 0 10 1</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\Driver\key.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 14</file>
+        </tool>
+        <tool>
+          <name>ICC8051</name>
           <file> 4</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
-          <name>ICC8051</name>
-          <file> 8 5</file>
+          <name>BICOMP</name>
+          <file> 16 10</file>
         </tool>
         <tool>
-          <name>BICOMP</name>
-          <file> 8 5</file>
+          <name>ICC8051</name>
+          <file> 16 10</file>
         </tool>
       </inputs>
     </file>
@@ -55,22 +84,22 @@
       <name>$PROJ_DIR$\..\App\led.c</name>
       <outputs>
         <tool>
-          <name>ICC8051</name>
-          <file> 9</file>
+          <name>BICOMP</name>
+          <file> 8</file>
         </tool>
         <tool>
-          <name>BICOMP</name>
-          <file> 6</file>
+          <name>ICC8051</name>
+          <file> 13</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
-          <name>ICC8051</name>
-          <file> 8 5</file>
+          <name>BICOMP</name>
+          <file> 0 10</file>
         </tool>
         <tool>
-          <name>BICOMP</name>
-          <file> 8 5</file>
+          <name>ICC8051</name>
+          <file> 0 10</file>
         </tool>
       </inputs>
     </file>
@@ -79,7 +108,7 @@
       <inputs>
         <tool>
           <name>BILINK</name>
-          <file> 6 4</file>
+          <file> 14 8 2</file>
         </tool>
       </inputs>
     </file>
@@ -88,7 +117,7 @@
       <inputs>
         <tool>
           <name>XLINK</name>
-          <file> 3 9 2 10</file>
+          <file> 6 4 13 7 5</file>
         </tool>
       </inputs>
     </file>

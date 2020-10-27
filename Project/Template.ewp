@@ -150,7 +150,7 @@
         </option>
         <option>
           <name>RTLibraryPath</name>
-          <state>$TOOLKIT_DIR$\LIB\CLIB\cl-pli-nsid-1e16x01.r51</state>
+          <state>$TOOLKIT_DIR$\LIB\CLIB\cl-pli-blxd-1e16x01.r51</state>
         </option>
         <option>
           <name>Input variant</name>
@@ -523,7 +523,7 @@
         </option>
         <option>
           <name>OutputFile</name>
-          <state></state>
+          <state>$FILE_BNAME$.r51</state>
         </option>
         <option>
           <name>ACaseSensitivity</name>
@@ -2073,10 +2073,10 @@
   <group>
     <name>Driver</name>
     <file>
-      <name>$PROJ_DIR$\..\App\led.c</name>
+      <name>$PROJ_DIR$\..\Driver\key.c</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\App\led.h</name>
+      <name>$PROJ_DIR$\..\App\led.c</name>
     </file>
   </group>
 </project>
