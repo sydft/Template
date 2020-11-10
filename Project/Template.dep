@@ -2,35 +2,45 @@
 
 <project>
   <fileVersion>2</fileVersion>
-  <fileChecksum>4061452778</fileChecksum>
+  <fileChecksum>1884618362</fileChecksum>
   <configuration>
     <name>Debug</name>
     <outputs>
-      <file>$PROJ_DIR$\..\App\led.h</file>
-      <file>$PROJ_DIR$\..\App\key.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\main.pbi</file>
-      <file>$PROJ_DIR$\..\App\main.c</file>
-      <file>$PROJ_DIR$\Debug\Obj\key.r51</file>
-      <file>$TOOLKIT_DIR$\lib\clib\cl-pli-blxd-1e16x01.r51</file>
-      <file>$TOOLKIT_DIR$\config\devices\Texas Instruments\lnk51ew_cc2531F256_banked.xcl</file>
-      <file>$PROJ_DIR$\Debug\Obj\main.r51</file>
-      <file>$PROJ_DIR$\Debug\Obj\led.pbi</file>
-      <file>$PROJ_DIR$\..\Driver\key.c</file>
-      <file>$TOOLKIT_DIR$\inc\ioCC2530.h</file>
       <file>$PROJ_DIR$\..\App\led.c</file>
-      <file>$PROJ_DIR$\Debug\Obj\Template.pbd</file>
+      <file>$PROJ_DIR$\Debug\Obj\led.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\main.r51</file>
       <file>$PROJ_DIR$\Debug\Obj\led.r51</file>
+      <file>$PROJ_DIR$\..\App\main.c</file>
+      <file>$PROJ_DIR$\..\Driver\led.c</file>
       <file>$PROJ_DIR$\Debug\Obj\key.pbi</file>
+      <file>$TOOLKIT_DIR$\lib\clib\cl-pli-blxd-1e16x01.r51</file>
+      <file>$PROJ_DIR$\Debug\Obj\main.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\Template.pbd</file>
+      <file>$PROJ_DIR$\..\Driver\key.c</file>
       <file>$PROJ_DIR$\Debug\Exe\Template.d51</file>
+      <file>$TOOLKIT_DIR$\config\devices\Texas Instruments\lnk51ew_cc2531F256_banked.xcl</file>
+      <file>$TOOLKIT_DIR$\inc\ioCC2530.h</file>
+      <file>$PROJ_DIR$\..\Driver\led.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\key.r51</file>
       <file>$PROJ_DIR$\..\Driver\key.h</file>
-      <file>C:\Users\&#x90D1;&#x4F1F;\AppData\Roaming\IAR Embedded Workbench\CodeTemplates.ENU.txt</file>
+      <file>$PROJ_DIR$\..\Driver\intp.h</file>
+      <file>$PROJ_DIR$\..\Driver\intp.c</file>
     </outputs>
     <file>
       <name>[ROOT_NODE]</name>
       <outputs>
         <tool>
           <name>XLINK</name>
-          <file> 15</file>
+          <file> 11</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\App\led.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 1</file>
         </tool>
       </outputs>
     </file>
@@ -38,68 +48,45 @@
       <name>$PROJ_DIR$\..\App\main.c</name>
       <outputs>
         <tool>
-          <name>BICOMP</name>
+          <name>ICC8051</name>
           <file> 2</file>
         </tool>
-        <tool>
-          <name>ICC8051</name>
-          <file> 7</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 0 10</file>
-        </tool>
-        <tool>
-          <name>ICC8051</name>
-          <file> 0 10 1</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\Driver\key.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 14</file>
-        </tool>
-        <tool>
-          <name>ICC8051</name>
-          <file> 4</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 16 10</file>
-        </tool>
-        <tool>
-          <name>ICC8051</name>
-          <file> 16 10</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\App\led.c</name>
-      <outputs>
         <tool>
           <name>BICOMP</name>
           <file> 8</file>
         </tool>
+      </outputs>
+      <inputs>
         <tool>
           <name>ICC8051</name>
-          <file> 13</file>
+          <file> 14 13 16</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 14 13 16</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\Driver\led.c</name>
+      <outputs>
+        <tool>
+          <name>ICC8051</name>
+          <file> 3</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 1</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
-          <name>BICOMP</name>
-          <file> 0 10</file>
+          <name>ICC8051</name>
+          <file> 14 13</file>
         </tool>
         <tool>
-          <name>ICC8051</name>
-          <file> 0 10</file>
+          <name>BICOMP</name>
+          <file> 14 13</file>
         </tool>
       </inputs>
     </file>
@@ -108,7 +95,30 @@
       <inputs>
         <tool>
           <name>BILINK</name>
-          <file> 14 8 2</file>
+          <file> 6 1 8</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\Driver\key.c</name>
+      <outputs>
+        <tool>
+          <name>ICC8051</name>
+          <file> 15</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 6</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICC8051</name>
+          <file> 16 13</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 16 13</file>
         </tool>
       </inputs>
     </file>
@@ -117,10 +127,14 @@
       <inputs>
         <tool>
           <name>XLINK</name>
-          <file> 6 4 13 7 5</file>
+          <file> 12 15 3 2 7</file>
         </tool>
       </inputs>
     </file>
+    <forcedrebuild>
+      <name>$PROJ_DIR$\..\App\led.c</name>
+      <tool>ICC8051</tool>
+    </forcedrebuild>
   </configuration>
   <configuration>
     <name>Release</name>

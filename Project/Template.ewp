@@ -439,7 +439,8 @@
         </option>
         <option>
           <name>CCIncludePath2</name>
-          <state></state>
+          <state>$PROJ_DIR$\..\Driver</state>
+          <state>$PROJ_DIR$\..\App</state>
         </option>
         <option>
           <name>CCStdIncCheck</name>
@@ -2076,7 +2077,7 @@
       <name>$PROJ_DIR$\..\Driver\key.c</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\App\led.c</name>
+      <name>$PROJ_DIR$\..\Driver\led.c</name>
     </file>
   </group>
 </project>

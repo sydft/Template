@@ -7,9 +7,8 @@
 ****************************************************************************
 * 副本
 *
-*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-\*头文件---------------------------------------------------*/
+*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+/*头文件---------------------------------------------------*/
 #include"led.h"
 /*宏定义---------------------------------------------------*/
 //D1 D2 D3 P1_0 P1_1 P1_4
@@ -20,15 +19,8 @@
 #define LED_OFF 1
 /*结构体或枚举---------------------------------------------------*/
 /*内部函数声明---------------------------------------------------*/
-
-
-
-
-
 /*函数---------------------------------------------------*/
-
 /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
 *函数名     : LedInit
 *参数       : void
 *返回       : void
@@ -38,13 +30,11 @@
 ---------------------------------------------------*/
 void LedInit (void)
 {
-  P1SEL &= 0xEC;   //P1SEL对应位设置为通用IO(清零)
-  P1DIR |= 0x13;   //P1DIR对应位设置为输出(置1)
-  P1 |= 0x13;   //灭灯
+    P1SEL &= 0xEC;   //P1SEL对应位设置为通用IO(清零)
+    P1DIR |= 0x13;   //P1DIR对应位设置为输出(置1)
+    P1 |= 0x13;   //灭灯
 }
-
 /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
 *函数名     : LedOn
 *参数       : unsigned char ucLedNum
 *返回       : void
@@ -54,30 +44,29 @@ void LedInit (void)
 ---------------------------------------------------*/
 void LedOn (unsigned char ucLedNum)
 {
-  if(LED_ALL_E == ucLedNum)
-  {
-    LED1=LED_ON;
-    LED2=LED_ON;
-    LED3=LED_ON;
-  }
-  else if(LED_LED1_E == ucLedNum)
-  {
-    LED1=LED_ON;
-  }
-  else if(LED_LED2_E == ucLedNum)
-  {
-    LED2=LED_ON;
-  }
-  else if(LED_LED3_E == ucLedNum)
-  {
-    LED3=LED_ON;
-  }
-  else
-  {
-    //do nothing
-  }
+    if(LED_ALL_E == ucLedNum)
+    {
+        LED1=LED_ON;
+        LED2=LED_ON;
+        LED3=LED_ON;
+    }
+    else if(LED_LED1_E == ucLedNum)
+    {
+        LED1=LED_ON;
+    }
+    else if(LED_LED2_E == ucLedNum)
+    {
+        LED2=LED_ON;
+    }
+    else if(LED_LED3_E == ucLedNum)
+    {
+        LED3=LED_ON;
+    }
+    else
+    {
+        //do nothing
+    }
 }
-
 /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 *函数名     : LedOff
@@ -89,30 +78,29 @@ void LedOn (unsigned char ucLedNum)
 ---------------------------------------------------*/
 void LedOff (unsigned char ucLedNum)
 {
-  if(LED_ALL_E == ucLedNum)
-  {
-    LED1=LED_OFF;
-    LED2=LED_OFF;
-    LED3=LED_OFF;
-  }
-  else if(LED_LED1_E == ucLedNum)
-  {
-    LED1=LED_OFF;
-  }
-  else if(LED_LED2_E == ucLedNum)
-  {
-    LED2=LED_OFF;
-  }
-  else if(LED_LED3_E == ucLedNum)
-  {
-    LED3=LED_OFF;
-  }
-  else
-  {
-    //do nothing
-  }
+    if(LED_ALL_E == ucLedNum)
+    {
+        LED1=LED_OFF;
+        LED2=LED_OFF;
+        LED3=LED_OFF;
+    }
+    else if(LED_LED1_E == ucLedNum)
+    {
+        LED1=LED_OFF;
+    }
+    else if(LED_LED2_E == ucLedNum)
+    {
+        LED2=LED_OFF;
+    }
+    else if(LED_LED3_E == ucLedNum)
+    {
+        LED3=LED_OFF;
+    }
+    else
+    {
+        //do nothing
+    }
 }
-
 /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 *函数名     : LedToggle
@@ -124,30 +112,50 @@ void LedOff (unsigned char ucLedNum)
 ---------------------------------------------------*/
 void LedToggle (unsigned char ucLedNum)
 {
-  if(LED_LED1_E == ucLedNum)
-  {
-    LED1=LED_OFF;
-    LED2=LED_ON;
-    LED3=LED_ON;
-  }
-  else if(LED_LED2_E == ucLedNum)
-  {
-    LED2=LED_OFF;
-    LED1=LED_ON;
-    LED3=LED_ON;
-  }
-  else if(LED_LED3_E == ucLedNum)
-  {
-    LED3=LED_OFF;
-    LED1=LED_ON;
-    LED2=LED_ON;
-  }
+    if(LED_ALL_E == ucLedNum)
+    {
+        LED1=!LED1;
+        LED2=!LED2;
+        LED3=!LED3;
+    }
+    else if(LED_LED1_E == ucLedNum)
+    {
+        LED1=!LED1;
+    }
+    else if(LED_LED2_E == ucLedNum)
+    {
+        LED2=!LED2;
+    }
+    else if(LED_LED3_E == ucLedNum)
+    {
+        LED3=!LED3;
+    }
+    else
+    {
+        //do nothing
+    }
 }
+/*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-
-
-
-
-
-
-
+*函数名     : LSD
+*参数       : void
+*返回       : void
+*作者       : zhengwei
+*时间       : 2020/10/20
+*描述       : 流水
+---------------------------------------------------*/
+void LSD(void)
+{
+    //点亮LED1
+    LED1=LED_ON;
+    //熄灭LED2、LED3
+    LED2=LED3=LED_OFF;
+    //点亮LED2
+    LED2=LED_ON;
+    //熄灭LED1、LED3
+    LED1=LED3=LED_OFF;
+    //点亮LED3
+    LED3=LED_ON;
+    //熄灭LED1、LED2
+    LED1=LED2=LED_OFF;
+}

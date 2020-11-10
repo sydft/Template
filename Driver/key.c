@@ -15,9 +15,7 @@
 #define KEY2 P2_0
 /* 结构体或枚举 ----------------------------------------------------------*/
 /* 内部函数声明-----------------------------------------------------------*/
-
 /* 函数 ------------------------------------------------------------------*/
-
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * 函数名  ： KeyInit
 * 参数    ： void
@@ -28,17 +26,16 @@
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 void KeyInit(void)
 {
-  //设置对应IO为通用IO P0 P2 SEL
-  P0SEL &= 0xFD;
-  P2SEL &= 0xFE;
-  //设置对应IO位输入
-  P0DIR &= 0xFD;
-  P2DIR &= 0xFE;
-  //设置对应IO为上拉模式/三态
-  P0INP &= 0xFD;
-  P2INP &= 0x5E;
+    //设置对应IO为通用IO P0 P2 SEL
+    P0SEL &= 0xFD;
+    P2SEL &= 0xFE;
+    //设置对应IO位输入
+    P0DIR &= 0xFD;
+    P2DIR &= 0xFE;
+    //设置对应IO为上拉模式/三态
+    P0INP &= 0xFD;
+    P2INP &= 0x5E;
 }
-
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * 函数名  ： KeyStateGet
 * 参数    ： unsigned char ucKeyNum
@@ -49,18 +46,18 @@ void KeyInit(void)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 unsigned char KeyStateGet(unsigned char ucKeyNum)
 {
-  unsigned char ucKeyState;
-  if(KEY_KEY1_E==ucKeyNum)
-  {
-    ucKeyState = KEY1;
-  }
-  else if(KEY_KEY2_E==ucKeyNum)
-  {
-    ucKeyState = KEY2;
-  }
-  else
-  {
-    ucKeyState = 255;
-  }
-  return ucKeyState;
+    unsigned char ucKeyState;
+    if(KEY_KEY1_E==ucKeyNum)
+    {
+        ucKeyState = KEY1;
+    }
+    else if(KEY_KEY2_E==ucKeyNum)
+    {
+        ucKeyState = KEY2;
+    }
+    else
+    {
+        ucKeyState = 255;
+    }
+    return ucKeyState;
 }
